@@ -60,6 +60,15 @@ const populateCard = (pokemon) => {
 
   fragment.appendChild(clone);
   flex.appendChild(fragment);
+
+  // Add button with class "card-btn" and refresh the page when clicked
+  const button = document.createElement("button");
+  button.classList.add("card-btn");
+  button.textContent = "Refresh";
+  button.addEventListener("click", () => {
+    location.reload();
+  });
+  flex.appendChild(button);
 };
 
 fetchData();
